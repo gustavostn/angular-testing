@@ -1,151 +1,136 @@
-import {fakeAsync, flush, flushMicrotasks, tick} from '@angular/core/testing';
-import {of} from 'rxjs';
-import {delay} from 'rxjs/operators';
+// Comentando código pronto
+// import {fakeAsync, flush, flushMicrotasks, tick} from '@angular/core/testing';
+// import {of} from 'rxjs';
+// import {delay} from 'rxjs/operators';
 
 
-describe('Async Testing Examples', () => {
+// describe('Async Testing Examples', () => {
 
-    it('Asynchronous test example with Jasmine done()', (done: DoneFn) => {
+//     it('Asynchronous test example with Jasmine done()', (done: DoneFn) => {
 
-        let test = false;
+//         let test = false;
 
-        setTimeout(() => {
+//         setTimeout(() => {
 
-            console.log('running assertions');
+//             console.log('running assertions');
 
-            test = true;
+//             test = true;
 
-            expect(test).toBeTruthy();
+//             expect(test).toBeTruthy();
 
-            done();
+//             done();
 
-        }, 1000);
+//         }, 1000);
 
-    });
+//     });
 
 
-    it('Asynchronous test example - setTimeout()', fakeAsync(() => {
+//     it('Asynchronous test example - setTimeout()', fakeAsync(() => {
 
-        let test = false;
+//         let test = false;
 
-        setTimeout(() => {
-        });
+//         setTimeout(() => {
+//         });
 
-        setTimeout(() => {
+//         setTimeout(() => {
 
-            console.log('running assertions setTimeout()');
+//             console.log('running assertions setTimeout()');
 
-            test = true;
+//             test = true;
 
-        }, 1000);
+//         }, 1000);
 
-        flush();
+//         flush();
 
-        expect(test).toBeTruthy();
+//         expect(test).toBeTruthy();
 
-    }));
+//     }));
 
 
-    it('Asynchronous test example - plain Promise', fakeAsync(() => {
+//     it('Asynchronous test example - plain Promise', fakeAsync(() => {
 
-        let test = false;
+//         let test = false;
 
-        console.log('Creating promise');
+//         console.log('Creating promise');
 
-        Promise.resolve().then(() => {
+//         Promise.resolve().then(() => {
 
-            console.log('Promise first then() evaluated successfully');
+//             console.log('Promise first then() evaluated successfully');
 
-            return Promise.resolve();
-        })
-        .then(() => {
+//             return Promise.resolve();
+//         })
+//         .then(() => {
 
-            console.log('Promise second then() evaluated successfully');
+//             console.log('Promise second then() evaluated successfully');
 
-            test = true;
+//             test = true;
 
-        });
+//         });
 
-        flushMicrotasks();
+//         flushMicrotasks();
 
-        console.log('Running test assertions');
+//         console.log('Running test assertions');
 
-        expect(test).toBeTruthy();
+//         expect(test).toBeTruthy();
 
-    }));
+//     }));
 
 
-    it('Asynchronous test example - Promises + setTimeout()', fakeAsync(() => {
+//     it('Asynchronous test example - Promises + setTimeout()', fakeAsync(() => {
 
-        let counter = 0;
+//         let counter = 0;
 
-        Promise.resolve()
-            .then(() => {
+//         Promise.resolve()
+//             .then(() => {
 
-               counter+=10;
+//                counter+=10;
 
-               setTimeout(() => {
+//                setTimeout(() => {
 
-                   counter += 1;
+//                    counter += 1;
 
-               }, 1000);
+//                }, 1000);
 
-            });
+//             });
 
-        expect(counter).toBe(0);
+//         expect(counter).toBe(0);
 
-        flushMicrotasks();
+//         flushMicrotasks();
 
-        expect(counter).toBe(10);
+//         expect(counter).toBe(10);
 
-        tick(500);
+//         tick(500);
 
-        expect(counter).toBe(10);
+//         expect(counter).toBe(10);
 
-        tick(500);
+//         tick(500);
 
-        expect(counter).toBe(11);
+//         expect(counter).toBe(11);
 
-    }));
+//     }));
 
-    it('Asynchronous test example - Observables', fakeAsync(() => {
+//     it('Asynchronous test example - Observables', fakeAsync(() => {
 
-        let test = false;
+//         let test = false;
 
-        console.log('Creating Observable');
+//         console.log('Creating Observable');
 
-        const test$ = of(test).pipe(delay(1000));
+//         const test$ = of(test).pipe(delay(1000));
 
-        test$.subscribe(() => {
+//         test$.subscribe(() => {
 
-            test = true;
+//             test = true;
 
-        });
+//         });
 
-        tick(1000);
+//         tick(1000);
 
-        console.log('Running test assertions');
+//         console.log('Running test assertions');
 
-        expect(test).toBe(true);
+//         expect(test).toBe(true);
 
 
-    }));
+//     }));
 
 
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// });
