@@ -22,6 +22,11 @@ export class CalculatorService {
     return n1 - n2;
   }
 
+  subtractErrorExample(n1: number, n2:number) {
+    this.logger.log("Changing subtraction by division operation called");
+    return n1 * n2;
+  }
+
 
 }
 
