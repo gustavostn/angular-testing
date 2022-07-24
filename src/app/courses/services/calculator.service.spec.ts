@@ -3,7 +3,7 @@ import { CalculatorService } from './calculator.service';
 import { LoggerService } from './logger.service';
 
 // Utilizando o mesmo nome do método que vou testar
-describe("CalculatorService", () => {
+describe(CalculatorService.name, () => {
 
     // Forçando o erro em um teste
     // it("should fail", () => {
@@ -92,7 +92,7 @@ describe("CalculatorService", () => {
         calculator = TestBed.inject<CalculatorService>(CalculatorService);
     })
 
-    it("should add two numbers", () => {
+    it(`#${CalculatorService.prototype.add.name} should add two numbers`, () => {
         console.log("Calling add")
         const result = calculator.add(2,2)
         expect(result).toBe(4, "Valor esperado diferente de 4")
@@ -100,7 +100,7 @@ describe("CalculatorService", () => {
     })
 
     
-    it("should subtract two numbers", () => {
+    it(`#${CalculatorService.prototype.subtract.name} should subtract two numbers`, () => {
         console.log("Calling subtract")
         const result = calculator.subtract(2,2)
         expect(result).toBe(0, "Valor esperado diferente de 0")
