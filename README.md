@@ -1,6 +1,16 @@
 <h1 align="center"><b> Implementação de testes no Angular </b></h1>
 
-Código com os testes realizados durante o curso <b>Angular Testing Course</b> realizado na Udemy.
+<span> Código com os testes realizados durante o curso <b>Angular Testing Course</b> realizado na Udemy.
+<span>
+
+<hr>
+
+<h2> <b>  Anotações: </b>  </h2> 
+<a href="https://impartial-cocoa-46c.notion.site/Angular-testing-masterClass-6560c24116744631a04f4a25081ee401" target="_blank"> clique aqui </a>
+
+<hr>
+
+<h2> <b>  Dependências: </b> </h2>
 
 <div align="center">
 
@@ -8,8 +18,7 @@ Código com os testes realizados durante o curso <b>Angular Testing Course</b> r
 </div>
 
 
-<h3> <b>  Conteúdo abordado: </b> </h3>
-
+<h2> <b>  Conteúdo abordado: </b> </h2>
 
 <ul>
     <li>Testes unitários</li>
@@ -45,5 +54,5 @@ ng teste --no-hot-reload
 ```
 <br />
 
-<h2> <b> Certificado: </b> </h2>
+<h1> <b> Meu certificado: </b> </h1>
 <h3> 🚧 aprendizado em andamento 🚧 </h3>
